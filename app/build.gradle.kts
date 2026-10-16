@@ -78,6 +78,8 @@ dependencies {
 
     // Image Loading
     implementation("io.coil-kt:coil-compose:2.7.0")
+    implementation("com.github.yalantis:ucrop:2.2.10")
+    implementation("com.google.mlkit:document-scanner:16.0.0-beta1")
 
     // PDF Processing
     implementation("com.tom-roush:pdfbox-android:2.0.27.0")
