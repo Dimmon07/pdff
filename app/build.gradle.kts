@@ -24,8 +24,7 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = true
-            isShrinkResources = true
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -62,7 +61,6 @@ dependencies {
     // Jetpack Compose BOM & UI
     val composeBom = platform("androidx.compose:compose-bom:2024.12.01")
     implementation(composeBom)
-    androidTestImplementation(composeBom)
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
@@ -71,33 +69,16 @@ dependencies {
     implementation("androidx.compose.foundation:foundation")
     implementation("androidx.compose.animation:animation")
 
-    // Navigation Compose
+    // Navigation
     implementation("androidx.navigation:navigation-compose:2.8.5")
 
-    // Kotlin Coroutines
+    // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
 
-    // Image Loading: Coil
+    // Image Loading
     implementation("io.coil-kt:coil-compose:2.7.0")
 
-    // Image Cropping: uCrop (Yalantis)
-    implementation("com.github.yalantis:ucrop:2.2.9")
-
-    // PDF Manipulation: PDFBox-Android (for parsing, merging, and page extraction)
+    // PDF Processing
     implementation("com.tom-roush:pdfbox-android:2.0.27.0")
-
-    // Google ML Kit: Document Scanner API (edge detection, auto-capture, perspective correction, clean filters)
-    implementation("com.google.android.gms:play-services-mlkit-document-scanner:16.0.0-beta1")
-
-    // Google ML Kit: On-Device Machine Translation & OCR
-    implementation("com.google.mlkit:translate:17.0.3")
-    implementation("com.google.mlkit:text-recognition:16.0.1")
-
-    // Background Processing: WorkManager
-    implementation("androidx.work:work-runtime-ktx:2.10.0")
-
-    // Debugging Tooling
-    debugImplementation("androidx.compose.ui:ui-tooling")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
