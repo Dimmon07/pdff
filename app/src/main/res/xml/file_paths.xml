@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Для тимчасових зображень після кропу та експорту PDF -->
+    <cache-path name="cached_files" path="." />
+    <!-- Для збережених документів у внутрішньому каталозі застосунку -->
+    <files-path name="pdf_documents" path="pdfs/" />
+    <!-- Для зовнішнього сховища застосунку (Android/data/...) -->
+    <external-files-path name="external_pdf_documents" path="pdfs/" />
+</paths>
