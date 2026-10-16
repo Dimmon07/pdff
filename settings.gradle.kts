@@ -1,12 +1,18 @@
 pluginManagement {
-    repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
+    resolutionStrategy {
+        eachPlugin {
+            when (requested.id.id) {
+                "com.android.application",
+                "com.android.library",
+                "com.android.test",
+                "com.android.dynamic-feature" -> {
+                    useModule("com.android.tools.build:gradle:${requested.version}")
+                }
             }
         }
+    }
+    repositories {
+        maven(url = "https://maven.google.com")
         mavenCentral()
         gradlePluginPortal()
     }
@@ -14,7 +20,7 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
+        maven(url = "https://maven.google.com")
         mavenCentral()
         maven { url = java.net.URI("https://jitpack.io") } // For uCrop
     }

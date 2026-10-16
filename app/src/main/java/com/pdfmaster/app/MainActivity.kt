@@ -16,6 +16,7 @@ import com.pdfmaster.app.ui.screens.imagetopdf.ImageToPdfScreen
 import com.pdfmaster.app.ui.screens.imagetopdf.ImageToPdfViewModel
 import com.pdfmaster.app.ui.screens.pdfeditor.PdfEditorScreen
 import com.pdfmaster.app.ui.screens.pdfeditor.PdfEditorViewModel
+import com.pdfmaster.app.ui.screens.translate.PdfTranslateScreen
 import com.pdfmaster.app.ui.theme.PdfMasterTheme
 
 class MainActivity : ComponentActivity() {
